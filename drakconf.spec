@@ -76,7 +76,7 @@ Exec=%{_sbindir}/%name
 Icon=drakconf.png
 Terminal=false
 Type=Application
-StartupNotify=true
+StartupNotify=false
 Categories=GTK;X-MandrivaLinux-System-Configuration;Settings;
 EOF
 
