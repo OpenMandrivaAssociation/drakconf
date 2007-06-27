@@ -93,8 +93,6 @@ install -d %buildroot/etc
 touch %buildroot/etc/mcc.conf
 
 for i in %buildroot{%_sbindir,%_bindir}/mcc; do ln -s {drakconf,$i}; done
-mkdir -p %buildroot/usr/X11R6/bin/
-echo -e "#\!/bin/sh\nexec /usr/bin/mcc" > %buildroot/usr/X11R6/bin/DrakConf
 
 (cd $RPM_BUILD_ROOT ; find usr -type f -name "*.png"  -printf "/%%p\n") > images-big.list
 perl -ni -e '/128/ ? print : print STDERR $_ ' images-big.list 2> images.list
@@ -122,7 +120,6 @@ rm -rf $RPM_BUILD_ROOT
 %config(noreplace) %{_sysconfdir}/gnome-vfs-2.0/vfolders/*
 %_bindir/*
 %_sbindir/*
-%attr(755,root,root) /usr/X11R6/bin/DrakConf
 %_menudir/drakconf
 %{_datadir}/applications/mandriva-drakconf.desktop
 %_miconsdir/*.png
