@@ -7,7 +7,7 @@
 Summary:  The Mandriva Linux Control Center 
 Name:     drakconf
 Version:  10.4.24
-Release:  %mkrel 2
+Release:  %mkrel 3
 # get the source from our cvs repository (see
 # http://www.mandrivalinux.com/en/cvs.php3)
 Source0:  %name-%version.tar.bz2
@@ -113,6 +113,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %files icons -f images.list
 %defattr(-,root,root)
+%_miconsdir/*.png
+%_iconsdir/*.png
+%_liconsdir/*.png
 
 %files -f %{name}.lang
 %defattr(-,root,root)
@@ -123,9 +126,6 @@ rm -rf $RPM_BUILD_ROOT
 %_sbindir/*
 %_menudir/drakconf
 %{_datadir}/applications/mandriva-drakconf.desktop
-%_miconsdir/*.png
-%_iconsdir/*.png
-%_liconsdir/*.png
 %dir %_datadir/mcc
 %_datadir/mcc/desktop
 %dir %_datadir/mcc/themes/
