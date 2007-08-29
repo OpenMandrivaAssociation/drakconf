@@ -127,7 +127,6 @@ rm -rf $RPM_BUILD_ROOT
 %_menudir/drakconf
 %{_datadir}/applications/mandriva-drakconf.desktop
 %dir %_datadir/mcc
-%_datadir/mcc/desktop
 %dir %_datadir/mcc/themes/
 %dir %_datadir/mcc/themes/default
 %_datadir/mcc/themes/default/gtkrc
