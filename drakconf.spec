@@ -121,7 +121,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 %doc COPYING 
 %config(noreplace) %ghost %{_sysconfdir}/mcc.conf
-%config(noreplace) %{_sysconfdir}/gnome-vfs-2.0/vfolders/*
 %_bindir/*
 %_sbindir/*
 %_menudir/drakconf
