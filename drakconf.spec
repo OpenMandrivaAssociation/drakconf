@@ -113,9 +113,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files icons -f images.list
 %defattr(-,root,root)
-%_miconsdir/*.png
-%_iconsdir/*.png
-%_liconsdir/*.png
 
 %files -f %{name}.lang
 %defattr(-,root,root)
