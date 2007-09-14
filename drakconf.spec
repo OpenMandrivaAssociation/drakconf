@@ -25,11 +25,11 @@ Requires: mandriva-release, drakxtools > 10.4.139
 Requires: harddrake-ui > 10-12mdk, popt >= 1.6.4-24mdk, usermode
 Requires: perl-Gtk2 >= 1.023-1mdk, perl-Gnome2-Vte
 Requires: gtk+2.0 >= 2.2.0-3mdk, perl-MDK-Common => 1.0.4-16mdk
-Suggests: drakfax, rpmdrake, rfbdrake, transfugdrake
+Suggests: drakfax, printerdrake, rpmdrake, rfbdrake, transfugdrake
 #Requires: drakcronat >= 0.1.3-1mdk # currenly broken, actually waiting for gtk+-2.x port completion
 Requires: drakmenustyle, userdrake => 1.2-1mdk
 Requires: drakconf-icons = %version
-Requires: drakx-net, printerdrake, drakbackup, drak3d, drakx-kbd-mouse-x11
+Requires: drakx-net, drakbackup, drak3d, drakx-kbd-mouse-x11
 BuildRoot: %_tmppath/%name-%version-buildroot
 Conflicts: rpmdrake < 2.4-5mdk
 # workaround rpm issues on updates (bad ordering relating to virtual packages?):
