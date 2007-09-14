@@ -78,7 +78,7 @@ Icon=drakconf.png
 Terminal=false
 Type=Application
 StartupNotify=false
-Categories=GTK;X-MandrivaLinux-System-Configuration;Settings;
+Categories=GTK;X-MandrivaLinux-CrossDesktop;System;
 EOF
 
 #install menu icon
