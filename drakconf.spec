@@ -6,7 +6,7 @@
 
 Summary:  The Mandriva Linux Control Center 
 Name:     drakconf
-Version:  10.10
+Version:  10.11
 Release:  %mkrel 1
 # get the source from our cvs repository (see
 # http://www.mandrivalinux.com/en/cvs.php3)
