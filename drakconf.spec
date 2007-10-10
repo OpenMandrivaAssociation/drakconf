@@ -74,7 +74,7 @@ cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-drakconf.desktop << EOF
 Name=Configure Your Computer
 Comment=Configure Your Computer
 Exec=%{_sbindir}/%name
-Icon=drakconf.png
+Icon=drakconf
 Terminal=false
 Type=Application
 StartupNotify=false
