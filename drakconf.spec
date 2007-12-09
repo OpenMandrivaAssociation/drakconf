@@ -62,12 +62,6 @@ rm -fr $RPM_BUILD_ROOT
 %find_lang %name
 
 #install menu
-mkdir -p %buildroot/%_menudir
-cat > %buildroot/%_menudir/drakconf << EOF
-?package(%{name}): needs="x11" icon="drakconf.png" section="System/Configuration" title="Configure Your Computer" longtitle="System configuration tool" command="%_sbindir/%name" \
-xdg="true"
-EOF
-
 mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications
 cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-drakconf.desktop << EOF
 [Desktop Entry]
@@ -120,11 +114,8 @@ rm -rf $RPM_BUILD_ROOT
 %config(noreplace) %ghost %{_sysconfdir}/mcc.conf
 %_bindir/*
 %_sbindir/*
-%_menudir/drakconf
 %{_datadir}/applications/mandriva-drakconf.desktop
 %dir %_datadir/mcc
 %dir %_datadir/mcc/themes/
 %dir %_datadir/mcc/themes/default
 %_datadir/mcc/themes/default/gtkrc
-
-
