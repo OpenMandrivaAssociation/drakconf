@@ -30,7 +30,6 @@ Suggests: drakfax, printerdrake, rpmdrake, rfbdrake, transfugdrake
 Requires: drakmenustyle, userdrake => 1.2-1mdk
 Requires: drakconf-icons = %version
 Requires: drakx-net, drakbackup, drak3d, drakx-kbd-mouse-x11
-BuildRoot: %_tmppath/%name-%version-buildroot
 Conflicts: rpmdrake < 2.4-5mdk
 # workaround rpm issues on updates (bad ordering relating to virtual packages?):
 Requires: perl-Gtk2-Html2
