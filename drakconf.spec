@@ -34,6 +34,7 @@ Conflicts: rpmdrake < 2.4-5mdk
 # workaround rpm issues on updates (bad ordering relating to virtual packages?):
 Requires: perl-Gtk2-Html2
 %define _requires_exceptions perl(Gtk2::Html2)
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 drakconf includes the Mandriva Linux Control Center which is an interface to 
