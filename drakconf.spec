@@ -112,6 +112,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 %doc COPYING 
 %config(noreplace) %ghost %{_sysconfdir}/mcc.conf
+%config(noreplace) %ghost %{_sysconfdir}/sysconfig/mcc.conf
 %_bindir/*
 %_sbindir/*
 %{_datadir}/applications/mandriva-drakconf.desktop
