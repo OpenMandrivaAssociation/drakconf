@@ -117,6 +117,7 @@ rm -rf $RPM_BUILD_ROOT
 %_bindir/*
 %_sbindir/*
 %{_datadir}/applications/mandriva-drakconf.desktop
+%{perl_vendorlib}/MDV
 %dir %_datadir/mcc
 %dir %_datadir/mcc/themes/
 %dir %_datadir/mcc/themes/default
