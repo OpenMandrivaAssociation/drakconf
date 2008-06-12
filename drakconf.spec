@@ -94,11 +94,15 @@ for i in %buildroot{%_sbindir,%_bindir}/mcc; do ln -s {drakconf,$i}; done
 perl -ni -e '/128/ ? print : print STDERR $_ ' images-big.list 2> images.list
 cat images-big.list >> %name.lang
 
+%if %mdkversion < 200900
 %post
 %update_menus
+%endif
 
+%if %mdkversion < 200900
 %postun
 %clean_menus
+%endif
 
 %triggerun -- %name < 9.0-0.6mdk
 [[ -s /root/.mcc ]] && cp -af /root/.mcc /etc/mcc.conf; :
