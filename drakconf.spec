@@ -6,7 +6,7 @@
 
 Summary:  The Mandriva Linux Control Center 
 Name:     drakconf
-Version:  10.20
+Version:  10.21
 Release:  %mkrel 1
 # get the source from our cvs repository (see
 # http://www.mandrivalinux.com/en/cvs.php3)
@@ -26,7 +26,7 @@ Requires: mandriva-release, drakxtools > 10.4.139
 Requires: harddrake-ui > 10-12mdk, popt >= 1.6.4-24mdk, usermode
 Requires: perl-Gtk2 >= 1.023-1mdk, perl-Gnome2-Vte
 Requires: gtk+2.0 >= 2.2.0-3mdk, perl-MDK-Common => 1.0.4-16mdk
-Suggests: drakfax, system-config-printer, rpmdrake, rfbdrake, transfugdrake, drakmenustyle, drakguard, draksnapshot
+Suggests: drakfax, system-config-printer >= 1.0.4-4mdv, rpmdrake, rfbdrake, transfugdrake, drakmenustyle, drakguard, draksnapshot
 #Requires: drakcronat >= 0.1.3-1mdk # currenly broken, actually waiting for gtk+-2.x port completion
 Requires: userdrake => 1.2-1mdk
 Requires: drakconf-icons = %version
