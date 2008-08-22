@@ -6,8 +6,8 @@
 
 Summary:  The Mandriva Linux Control Center 
 Name:     drakconf
-Version:  10.21
-Release:  %mkrel 2
+Version:  10.22
+Release:  %mkrel 1
 # get the source from our cvs repository (see
 # http://www.mandrivalinux.com/en/cvs.php3)
 Source0:  %name-%version.tar.lzma
@@ -22,7 +22,7 @@ Provides: DrakConf
 BuildRequires: gettext intltool
 BuildRequires: perl-MDK-Common-devel
 BuildRequires: drakxtools-backend
-Requires: mandriva-release, drakxtools > 10.4.139
+Requires: mandriva-release, drakxtools > 11.22
 Requires: harddrake-ui > 10-12mdk, popt >= 1.6.4-24mdk, usermode
 Requires: perl-Gtk2 >= 1.023-1mdk, perl-Gnome2-Vte
 Requires: gtk+2.0 >= 2.2.0-3mdk, perl-MDK-Common => 1.0.4-16mdk
