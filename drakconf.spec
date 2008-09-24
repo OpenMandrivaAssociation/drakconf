@@ -22,7 +22,7 @@ Provides: DrakConf
 BuildRequires: gettext intltool
 BuildRequires: perl-MDK-Common-devel
 BuildRequires: drakxtools-backend
-Requires: mandriva-release, drakxtools >= 11.47.1
+Requires: mandriva-release, drakxtools >= 11.52.1
 Requires: harddrake-ui > 10-12mdk, popt >= 1.6.4-24mdk, usermode
 Requires: perl-Gtk2 >= 1.023-1mdk, perl-Gnome2-Vte
 Requires: gtk+2.0 >= 2.2.0-3mdk, perl-MDK-Common => 1.0.4-16mdk
