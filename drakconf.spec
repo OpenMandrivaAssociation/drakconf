@@ -7,7 +7,7 @@
 Summary:  The Mandriva Linux Control Center 
 Name:     drakconf
 Version:  11.6
-Release:  %mkrel 1
+Release:  %mkrel 2
 # get the source from our cvs repository (see
 # http://www.mandrivalinux.com/en/cvs.php3)
 Source0:  %name-%version.tar.lzma
@@ -33,7 +33,7 @@ Requires: drakconf-icons = %version
 Requires: drakx-net, drakbackup, drak3d, drakx-kbd-mouse-x11
 Conflicts: rpmdrake < 2.4-5mdk
 # workaround rpm issues on updates (bad ordering relating to virtual packages?):
-Requires: perl-Gtk2-Html2
+Requires: perl-Gtk2-WebKit
 %define _requires_exceptions perl(Gtk2::Html2)
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
