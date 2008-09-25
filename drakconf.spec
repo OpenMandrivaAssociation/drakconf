@@ -16,7 +16,7 @@ Source2:  drakconf32.png
 Source3:  drakconf48.png
 License:  GPL
 Group:    System/Configuration/Other
-Url:      http://www.mandrivalinux.com/en/cvs.php3
+Url:      http://wiki.mandriva.com/en/ControlCenter
 Obsoletes: DrakConf
 Provides: DrakConf
 BuildRequires: gettext intltool
