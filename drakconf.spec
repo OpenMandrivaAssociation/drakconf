@@ -64,17 +64,7 @@ rm -fr $RPM_BUILD_ROOT
 
 #install menu
 mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications
-cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-drakconf.desktop << EOF
-[Desktop Entry]
-Name=Configure Your Computer
-Comment=Configure Your Computer
-Exec=%{_sbindir}/%name
-Icon=drakconf
-Terminal=false
-Type=Application
-StartupNotify=false
-Categories=GTK;X-MandrivaLinux-CrossDesktop;System;
-EOF
+install -m644 drakconf.desktop $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-drakconf.desktop
 
 #install menu icon
 mkdir -p %buildroot/{%_miconsdir,%_liconsdir}
