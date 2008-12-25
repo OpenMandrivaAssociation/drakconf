@@ -36,6 +36,7 @@ Conflicts: rpmdrake < 2.4-5mdk
 Requires: perl-Gtk2-WebKit
 %define _requires_exceptions perl(Gtk2::Html2)
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildArch: noarch
 
 %description
 drakconf includes the Mandriva Linux Control Center which is an interface to 
