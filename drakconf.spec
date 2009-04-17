@@ -7,7 +7,7 @@
 Summary:  The Mandriva Linux Control Center 
 Name:     drakconf
 Version:  12.10.1
-Release:  %mkrel 1
+Release:  %mkrel 2
 # get the source from our cvs repository (see
 # http://www.mandrivalinux.com/en/cvs.php3)
 Source0:  %name-%version.tar.lzma
@@ -114,6 +114,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/applications/mandriva-drakconf.desktop
 %{perl_vendorlib}/MDV
 %dir %_datadir/mcc
+%_datadir/mcc/progs.conf
 %dir %_datadir/mcc/themes/
 %dir %_datadir/mcc/themes/default
 %_datadir/mcc/themes/default/gtkrc
