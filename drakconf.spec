@@ -1,6 +1,3 @@
-# Changed by Makefile of cvs.
-# do not edit here, but in cvs/soft/control-center
-
 # needed to properly rebuild for 10.0
 %define _requires_exceptions perl(lang)
 
