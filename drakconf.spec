@@ -11,7 +11,7 @@ Source0:  %name-%version.tar.lzma
 Source1:  drakconf16.png
 Source2:  drakconf32.png
 Source3:  drakconf48.png
-License:  GPL
+License:  GPLv2+
 Group:    System/Configuration/Other
 Url:      http://wiki.mandriva.com/en/ControlCenter
 Obsoletes: DrakConf
