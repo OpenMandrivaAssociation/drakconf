@@ -11,6 +11,7 @@ Source0:  %name-%version.tar.lzma
 Source1:  drakconf16.png
 Source2:  drakconf32.png
 Source3:  drakconf48.png
+Patch0:		mcc-buildfix.diff
 License:  GPLv2+
 Group:    System/Configuration/Other
 Url:      http://wiki.mandriva.com/en/ControlCenter
@@ -18,7 +19,7 @@ Obsoletes: DrakConf
 Provides: DrakConf
 BuildRequires: gettext intltool
 BuildRequires: perl-MDK-Common-devel
-BuildRequires: drakxtools-backend mdkonline
+BuildRequires: drakxtools-backend
 Requires: mandriva-release, drakxtools >= 11.64
 Requires: harddrake-ui > 10-12mdk, popt >= 1.6.4-24mdk, usermode
 Requires: perl-Gtk2 >= 1.023-1mdk, perl-Gnome2-Vte
@@ -51,6 +52,7 @@ tools' banners.
 
 %prep
 %setup -q
+%apply_patches
 
 %build
 
