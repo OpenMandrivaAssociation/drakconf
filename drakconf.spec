@@ -18,7 +18,7 @@ Obsoletes: DrakConf
 Provides: DrakConf
 BuildRequires: gettext intltool
 BuildRequires: perl-MDK-Common-devel
-BuildRequires: drakxtools-backend
+BuildRequires: drakxtools-backend mdkonline
 Requires: mandriva-release, drakxtools >= 11.64
 Requires: harddrake-ui > 10-12mdk, popt >= 1.6.4-24mdk, usermode
 Requires: perl-Gtk2 >= 1.023-1mdk, perl-Gnome2-Vte
