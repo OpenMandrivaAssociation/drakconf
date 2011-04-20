@@ -3,8 +3,8 @@
 
 Summary:  The Mandriva Linux Control Center 
 Name:     drakconf
-Version:  12.19.1
-Release:  %mkrel 3
+Version:  12.19.2
+Release:  %mkrel 1
 # get the source from our cvs repository (see
 # http://www.mandrivalinux.com/en/cvs.php3)
 Source0:  %name-%version.tar.lzma
@@ -28,7 +28,7 @@ Suggests: mdkonline >= 2.77.19
 #Requires: drakcronat >= 0.1.3-1mdk # currenly broken, actually waiting for gtk+-2.x port completion
 Requires: userdrake => 1.2-1mdk
 Requires: drakconf-icons = %version
-Requires: drakx-net, drak3d, drakx-kbd-mouse-x11
+Requires: drakx-net, drakx-kbd-mouse-x11
 Conflicts: rpmdrake < 2.4-5mdk
 # workaround rpm issues on updates (bad ordering relating to virtual packages?):
 Requires: perl-Gtk2-WebKit
