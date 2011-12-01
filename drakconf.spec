@@ -57,15 +57,15 @@ tools' banners.
 %build
 
 %install
-rm -fr $RPM_BUILD_ROOT
+rm -fr %{buildroot}
 %makeinstall_std
 
 #install lang
 %find_lang %name
 
 #install menu
-mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications
-install -m644 drakconf.desktop $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-drakconf.desktop
+mkdir -p %{buildroot}%{_datadir}/applications
+install -m644 drakconf.desktop %{buildroot}%{_datadir}/applications/mandriva-drakconf.desktop
 
 #install menu icon
 mkdir -p %buildroot/{%_miconsdir,%_liconsdir}
@@ -81,7 +81,7 @@ touch %buildroot/etc/mcc.conf
 
 for i in %buildroot{%_sbindir,%_bindir}/mcc; do ln -s {drakconf,$i}; done
 
-(cd $RPM_BUILD_ROOT ; find usr -type f -name "*.png"  -printf "/%%p\n") > images-big.list
+(cd %{buildroot} ; find usr -type f -name "*.png"  -printf "/%%p\n") > images-big.list
 perl -ni -e '/128/ ? print : print STDERR $_ ' images-big.list 2> images.list
 cat images-big.list >> %name.lang
 
@@ -99,7 +99,7 @@ cat images-big.list >> %name.lang
 [[ -s /root/.mcc ]] && cp -af /root/.mcc /etc/mcc.conf; :
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files icons -f images.list
 %defattr(-,root,root)
