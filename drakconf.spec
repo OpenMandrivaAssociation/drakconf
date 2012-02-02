@@ -1,53 +1,59 @@
-# needed to properly rebuild for 10.0
-%define _requires_exceptions perl(lang)
-
-Summary:  The Mandriva Linux Control Center 
+Summary:  The %{_vendor} Linux Control Center 
 Name:     drakconf
 Version:  12.19.2
-Release:  %mkrel 2
-# get the source from our cvs repository (see
-# http://www.mandrivalinux.com/en/cvs.php3)
-Source0:  %name-%version.tar.lzma
+Release:  2
+License:  GPLv2+
+Group:    System/Configuration/Other
+Url:      http://wiki.mandriva.com/en/ControlCenter
+Source0:  %{name}-%{version}.tar.lzma
 Source1:  drakconf16.png
 Source2:  drakconf32.png
 Source3:  drakconf48.png
 Patch0:   drakxtools-13.51-remove-autologin.patch
-License:  GPLv2+
-Group:    System/Configuration/Other
-Url:      http://wiki.mandriva.com/en/ControlCenter
-Obsoletes: DrakConf
-Provides: DrakConf
-BuildRequires: gettext intltool
-BuildRequires: perl-MDK-Common-devel
-BuildRequires: drakxtools-backend
-Requires: mandriva-release, drakxtools >= 11.64
-Requires: harddrake-ui > 10-12mdk, popt >= 1.6.4-24mdk, usermode
-Requires: perl-Gtk2 >= 1.023-1mdk, perl-Gnome2-Vte
-Requires: gtk+2.0 >= 2.2.0-3mdk, perl-MDK-Common => 1.0.4-16mdk
-Suggests: drakfax, system-config-printer >= 1.0.4-4mdv, rpmdrake, transfugdrake, drakmenustyle, drakguard, draksnapshot
-Suggests: mdkonline >= 2.77.19
-#Requires: drakcronat >= 0.1.3-1mdk # currenly broken, actually waiting for gtk+-2.x port completion
-Requires: userdrake => 1.2-1mdk
-Requires: drakconf-icons = %version
-Requires: drakx-net, drakx-kbd-mouse-x11
-Conflicts: rpmdrake < 2.4-5mdk
-# workaround rpm issues on updates (bad ordering relating to virtual packages?):
-Requires: perl-Gtk2-WebKit
-%define _requires_exceptions perl(Gtk2::Html2)
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch: noarch
 
+BuildRequires: gettext
+BuildRequires: intltool
+BuildRequires: perl-MDK-Common-devel
+BuildRequires: drakxtools-backend
+
+Requires: %{_real_vendor}-release
+Requires: drakxtools >= 11.64
+Requires: harddrake-ui
+Requires: popt
+Requires: usermode
+Requires: perl-Gtk2
+Requires: perl-Gnome2-Vte
+Requires: gtk+2.0
+Requires: perl-MDK-Common
+Requires: userdrake
+Requires: drakconf-icons = %{version}
+Requires: drakx-net
+Requires: drakx-kbd-mouse-x11
+Requires: perl-Gtk2-WebKit
+Suggests: drakfax
+Suggests: system-config-printer
+Suggests: rpmdrake
+Suggests: transfugdrake
+Suggests: drakmenustyle
+Suggests: drakguard
+Suggests: draksnapshot
+Suggests: mdkonline >= 2.77.19
+
+# workaround rpm issues on updates (bad ordering relating to virtual packages?):
+%define _requires_exceptions perl(Gtk2::Html2)
+
 %description
-drakconf includes the Mandriva Linux Control Center which is an interface to 
+drakconf includes the %{_vendor} Linux Control Center which is an interface to 
 multiple utilities from DrakXtools.
 
 %package icons
-Summary: Icons of the Mandriva Linux Control Center
+Summary: Icons of the %{_vendor} Linux Control Center
 Group:   Graphical desktop/Other
 Conflicts: drakconf < 10.2-4mdk
 
 %description icons
-This package hold icons of the Mandriva Linux Control Center used in
+This package hold icons of the %{_vendor} Linux Control Center used in
 tools' banners.
 
 %prep
@@ -61,60 +67,42 @@ rm -fr %{buildroot}
 %makeinstall_std
 
 #install lang
-%find_lang %name
+%find_lang %{name}
 
 #install menu
 mkdir -p %{buildroot}%{_datadir}/applications
-install -m644 drakconf.desktop %{buildroot}%{_datadir}/applications/mandriva-drakconf.desktop
+install -m644 drakconf.desktop %{buildroot}%{_datadir}/applications/%{_real_vendor}-drakconf.desktop
 
 #install menu icon
-mkdir -p %buildroot/{%_miconsdir,%_liconsdir}
-install -m644 %SOURCE1 %buildroot/%_miconsdir/drakconf.png
-install -m644 %SOURCE2 %buildroot/%_iconsdir/drakconf.png
-install -m644 %SOURCE3 %buildroot/%_liconsdir/drakconf.png
+mkdir -p %{buildroot}/{%{_miconsdir},%{_liconsdir}}
+install -m644 %{SOURCE1} %{buildroot}/%{_miconsdir}/drakconf.png
+install -m644 %{SOURCE2} %{buildroot}/%{_iconsdir}/drakconf.png
+install -m644 %{SOURCE3} %{buildroot}/%{_liconsdir}/drakconf.png
 
 #this allow user to use drakconf
-ln -sf %_bindir/drakconf %buildroot/%_sbindir/drakconf
+ln -sf %{_bindir}/drakconf %{buildroot}/%{_sbindir}/drakconf
 
-install -d %buildroot/etc
-touch %buildroot/etc/mcc.conf
+install -d %{buildroot}/etc
+touch %{buildroot}/etc/mcc.conf
 
-for i in %buildroot{%_sbindir,%_bindir}/mcc; do ln -s {drakconf,$i}; done
+for i in %{buildroot}{%{_sbindir},%{_bindir}}/mcc; do ln -s {drakconf,$i}; done
 
 (cd %{buildroot} ; find usr -type f -name "*.png"  -printf "/%%p\n") > images-big.list
 perl -ni -e '/128/ ? print : print STDERR $_ ' images-big.list 2> images.list
-cat images-big.list >> %name.lang
-
-%if %mdkversion < 200900
-%post
-%update_menus
-%endif
-
-%if %mdkversion < 200900
-%postun
-%clean_menus
-%endif
-
-%triggerun -- %name < 9.0-0.6mdk
-[[ -s /root/.mcc ]] && cp -af /root/.mcc /etc/mcc.conf; :
-
-%clean
-rm -rf %{buildroot}
+cat images-big.list >> %{name}.lang
 
 %files icons -f images.list
-%defattr(-,root,root)
 
 %files -f %{name}.lang
-%defattr(-,root,root)
 %doc COPYING 
 %config(noreplace) %ghost %{_sysconfdir}/mcc.conf
 %config(noreplace) %{_sysconfdir}/sysconfig/mcc.conf
-%_bindir/*
-%_sbindir/*
-%{_datadir}/applications/mandriva-drakconf.desktop
+%{_bindir}/*
+%{_sbindir}/*
+%{_datadir}/applications/%{_real_vendor}-drakconf.desktop
 %{perl_vendorlib}/MDV
-%dir %_datadir/mcc
-%_datadir/mcc/progs.conf
-%dir %_datadir/mcc/themes/
-%dir %_datadir/mcc/themes/default
-%_datadir/mcc/themes/default/gtkrc
+%dir %{_datadir}/mcc
+%{_datadir}/mcc/progs.conf
+%dir %{_datadir}/mcc/themes/
+%dir %{_datadir}/mcc/themes/default
+%{_datadir}/mcc/themes/default/gtkrc
