@@ -1,4 +1,4 @@
-Summary:  The %{_vendor} Linux Control Center 
+Summary:  The %{vendor} Linux Control Center 
 Name:     drakconf
 Version:  12.19.2
 Release:  2
@@ -17,7 +17,7 @@ BuildRequires: intltool
 BuildRequires: perl-MDK-Common-devel
 BuildRequires: drakxtools-backend
 
-Requires: %{_real_vendor}-release
+Requires: %{_vendor}-release
 Requires: drakxtools >= 11.64
 Requires: harddrake-ui
 Requires: popt
@@ -44,16 +44,16 @@ Suggests: mdkonline >= 2.77.19
 %define _requires_exceptions perl(Gtk2::Html2)
 
 %description
-drakconf includes the %{_vendor} Linux Control Center which is an interface to 
+drakconf includes the %{vendor} Linux Control Center which is an interface to 
 multiple utilities from DrakXtools.
 
 %package icons
-Summary: Icons of the %{_vendor} Linux Control Center
+Summary: Icons of the %{vendor} Linux Control Center
 Group:   Graphical desktop/Other
 Conflicts: drakconf < 10.2-4mdk
 
 %description icons
-This package hold icons of the %{_vendor} Linux Control Center used in
+This package hold icons of the %{vendor} Linux Control Center used in
 tools' banners.
 
 %prep
@@ -71,7 +71,7 @@ rm -fr %{buildroot}
 
 #install menu
 mkdir -p %{buildroot}%{_datadir}/applications
-install -m644 drakconf.desktop %{buildroot}%{_datadir}/applications/%{_real_vendor}-drakconf.desktop
+install -m644 drakconf.desktop %{buildroot}%{_datadir}/applications/%{_vendor}-drakconf.desktop
 
 #install menu icon
 mkdir -p %{buildroot}/{%{_miconsdir},%{_liconsdir}}
@@ -99,7 +99,7 @@ cat images-big.list >> %{name}.lang
 %config(noreplace) %{_sysconfdir}/sysconfig/mcc.conf
 %{_bindir}/*
 %{_sbindir}/*
-%{_datadir}/applications/%{_real_vendor}-drakconf.desktop
+%{_datadir}/applications/%{_vendor}-drakconf.desktop
 %{perl_vendorlib}/MDV
 %dir %{_datadir}/mcc
 %{_datadir}/mcc/progs.conf
