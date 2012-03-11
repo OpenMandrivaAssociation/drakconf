@@ -1,7 +1,7 @@
 Summary:  The %{vendor} Linux Control Center 
 Name:     drakconf
 Version:  12.19.2
-Release:  2
+Release:  3
 License:  GPLv2+
 Group:    System/Configuration/Other
 Url:      http://wiki.mandriva.com/en/ControlCenter
@@ -20,7 +20,6 @@ BuildRequires: drakxtools-backend
 Requires: %{_vendor}-release
 Requires: drakxtools >= 11.64
 Requires: harddrake-ui
-Requires: popt
 Requires: usermode
 Requires: perl-Gtk2
 Requires: perl-Gnome2-Vte
