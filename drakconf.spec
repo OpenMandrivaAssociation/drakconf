@@ -1,7 +1,7 @@
 Summary:  The %{vendor} Linux Control Center 
 Name:     drakconf
 Version:  12.19.2
-Release:  3
+Release:  4
 License:  GPLv2+
 Group:    System/Configuration/Other
 Url:      http://wiki.mandriva.com/en/ControlCenter
@@ -36,7 +36,7 @@ Suggests: rpmdrake
 Suggests: transfugdrake
 Suggests: drakmenustyle
 Suggests: drakguard
-Suggests: draksnapshot
+#Suggests: draksnapshot
 Suggests: mdkonline >= 2.77.19
 
 # workaround rpm issues on updates (bad ordering relating to virtual packages?):
