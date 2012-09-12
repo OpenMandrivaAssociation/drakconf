@@ -39,9 +39,6 @@ Suggests: drakguard
 #Suggests: draksnapshot
 Suggests: mdkonline >= 2.77.19
 
-# workaround rpm issues on updates (bad ordering relating to virtual packages?):
-%define _requires_exceptions perl(Gtk2::Html2)
-
 %description
 drakconf includes the %{vendor} Linux Control Center which is an interface to 
 multiple utilities from DrakXtools.
