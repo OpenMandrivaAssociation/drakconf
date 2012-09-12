@@ -21,15 +21,12 @@ Requires: %{_vendor}-release
 Requires: drakxtools >= 11.64
 Requires: harddrake-ui
 Requires: usermode
-Requires: perl-Gtk2
-Requires: perl-Gnome2-Vte
 Requires: gtk+2.0
 Requires: perl-MDK-Common
 Requires: userdrake
 Requires: drakconf-icons = %{version}
 Requires: drakx-net
 Requires: drakx-kbd-mouse-x11
-Requires: perl-Gtk2-WebKit
 Suggests: drakfax
 Suggests: system-config-printer
 Suggests: rpmdrake
