@@ -1,51 +1,51 @@
-Summary:  The %{vendor} Linux Control Center 
-Name:     drakconf
-Version:  12.19.2
-Release:  4
-License:  GPLv2+
-Group:    System/Configuration/Other
-Url:      http://wiki.mandriva.com/en/ControlCenter
-Source0:  %{name}-%{version}.tar.lzma
-Source1:  drakconf16.png
-Source2:  drakconf32.png
-Source3:  drakconf48.png
-Patch0:   drakxtools-13.51-remove-autologin.patch
-BuildArch: noarch
+Summary:	The %{vendor} Linux Control Center 
+Name:		drakconf
+Version:	12.19.2
+Release:	4
+License:	GPLv2+
+Group:		System/Configuration/Other
+Url:		http://wiki.mandriva.com/en/ControlCenter
+Source0:	%{name}-%{version}.tar.lzma
+Source1:	drakconf16.png
+Source2:	drakconf32.png
+Source3:	drakconf48.png
+Patch0:		drakxtools-13.51-remove-autologin.patch
+BuildArch:	noarch
 
-BuildRequires: gettext
-BuildRequires: intltool
-BuildRequires: perl-MDK-Common-devel
-BuildRequires: drakxtools-backend
+BuildRequires:	gettext
+BuildRequires:	intltool
+BuildRequires:	perl-MDK-Common-devel
+BuildRequires:	drakxtools-backend
 
-Requires: %{_vendor}-release
-Requires: drakxtools >= 11.64
-Requires: harddrake-ui
-Requires: usermode
-Requires: gtk+2.0
-Requires: perl-MDK-Common
-Requires: userdrake
-Requires: drakconf-icons = %{version}
-Requires: drakx-net
-Requires: drakx-kbd-mouse-x11
-Suggests: drakfax
-Suggests: system-config-printer
-Suggests: rpmdrake
-Suggests: transfugdrake
-Suggests: drakmenustyle
-Suggests: drakguard
-#Suggests: draksnapshot
-Suggests: mdkonline >= 2.77.19
+Requires:	%{_vendor}-release
+Requires:	drakxtools >= 11.64
+Requires:	harddrake-ui
+Requires:	usermode
+Requires:	gtk+2.0
+Requires:	perl-MDK-Common
+Requires:	userdrake
+Requires:	drakconf-icons = %{version}
+Requires:	drakx-net
+Requires:	drakx-kbd-mouse-x11
+Suggests:	drakfax
+Suggests:	system-config-printer
+Suggests:	rpmdrake
+Suggests:	transfugdrake
+Suggests:	drakmenustyle
+Suggests:	drakguard
+#Suggests:	draksnapshot
+Suggests:	mdkonline >= 2.77.19
 
 %description
 drakconf includes the %{vendor} Linux Control Center which is an interface to 
 multiple utilities from DrakXtools.
 
-%package icons
-Summary: Icons of the %{vendor} Linux Control Center
-Group:   Graphical desktop/Other
-Conflicts: drakconf < 10.2-4mdk
+%package	icons
+Summary:	Icons of the %{vendor} Linux Control Center
+Group:		Graphical desktop/Other
+Conflicts:	drakconf < 10.2-4mdk
 
-%description icons
+%description	icons
 This package hold icons of the %{vendor} Linux Control Center used in
 tools' banners.
 
@@ -56,7 +56,6 @@ tools' banners.
 %build
 
 %install
-rm -fr %{buildroot}
 %makeinstall_std
 
 #install lang
@@ -87,7 +86,6 @@ cat images-big.list >> %{name}.lang
 %files icons -f images.list
 
 %files -f %{name}.lang
-%doc COPYING 
 %config(noreplace) %ghost %{_sysconfdir}/mcc.conf
 %config(noreplace) %{_sysconfdir}/sysconfig/mcc.conf
 %{_bindir}/*
