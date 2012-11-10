@@ -1,0 +1,33 @@
+Index: drakxtools-13.51/control-center
+===================================================================
+--- drakxtools-13.51/control-center	(revision 273311)
++++ drakxtools-13.51/control-center	(working copy)
+@@ -533,7 +533,6 @@
+                 title => N("Configure boot steps"),
+                 list => [
+                     #if_(detect_devices::floppies, "Boot Disk"), # kernel is too big
+-                    "Auto login Config",
+                     "Boot Config",
+                     "Display Manager chooser",
+                 ]
+Index: drakxtools-13.51/lib/MDV/Control_Center.pm
+===================================================================
+--- drakxtools-13.51/lib/MDV/Control_Center.pm	(revision 273311)
++++ drakxtools-13.51/lib/MDV/Control_Center.pm	(working copy)
+@@ -61,16 +61,6 @@
+    },
+ 
+ 
+-   "Auto login Config" =>
+-   {
+-    binary => "$sbindir/drakboot",
+-    embedded => 1,
+-    description => N("Set up autologin to automatically log in"),
+-    long_description => N("Enable autologin and select the user to automatically log in"),
+-    icon => 'autologin-mdk',
+-   },
+-
+-
+    "Backups" =>
+    {
+     binary => "$sbindir/drakbackup",
