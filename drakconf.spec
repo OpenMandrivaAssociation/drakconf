@@ -1,7 +1,7 @@
 Summary:	The %{vendor} Linux Control Center 
 Name:		drakconf
 Version:	12.19.2
-Release:	4
+Release:	5
 License:	GPLv2+
 Group:		System/Configuration/Other
 Url:		http://wiki.mandriva.com/en/ControlCenter
