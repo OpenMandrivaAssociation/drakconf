@@ -18,23 +18,23 @@ BuildRequires:	perl-MDK-Common-devel
 BuildRequires:	drakxtools-backend
 
 Requires:	%{_vendor}-release
-Requires:	drakxtools >= 11.64
-Requires:	harddrake-ui
-Requires:	usermode
-Requires:	gtk+2.0
-Requires:	perl-MDK-Common
-Requires:	userdrake
 Requires:	drakconf-icons = %{version}
+Requires:	drakxtools >= 11.64
 Requires:	drakx-net
 Requires:	drakx-kbd-mouse-x11
+Requires:	gtk+2.0
+Requires:	harddrake-ui
+Requires:	perl-MDK-Common
+Requires:	userdrake
+Requires:	usermode
 Suggests:	drakfax
-Suggests:	system-config-printer
-Suggests:	rpmdrake
-Suggests:	transfugdrake
-Suggests:	drakmenustyle
 Suggests:	drakguard
+Suggests:	drakmenustyle
 #Suggests:	draksnapshot
 Suggests:	mdkonline >= 2.77.19
+Suggests:	rpmdrake
+Suggests:	system-config-printer
+Suggests:	transfugdrake
 
 %description
 drakconf includes the %{vendor} Linux Control Center which is an interface to 
@@ -43,7 +43,6 @@ multiple utilities from DrakXtools.
 %package	icons
 Summary:	Icons of the %{vendor} Linux Control Center
 Group:		Graphical desktop/Other
-Conflicts:	drakconf < 10.2-4mdk
 
 %description	icons
 This package hold icons of the %{vendor} Linux Control Center used in
@@ -97,3 +96,4 @@ cat images-big.list >> %{name}.lang
 %dir %{_datadir}/mcc/themes/
 %dir %{_datadir}/mcc/themes/default
 %{_datadir}/mcc/themes/default/gtkrc
+
