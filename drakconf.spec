@@ -46,8 +46,8 @@ Summary:	Icons of the %{vendor} Linux Control Center
 Group:		Graphical desktop/Other
 
 %description	icons
-This package hold icons of the %{vendor} Linux Control Center used in
-tools' banners.
+This package hold icons of the %{vendor} 
+Linux Control Center used in tools' banners.
 
 %prep
 %setup -q
