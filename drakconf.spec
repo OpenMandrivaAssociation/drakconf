@@ -16,6 +16,7 @@ BuildRequires:	gettext
 BuildRequires:	intltool
 BuildRequires:	perl-MDK-Common-devel
 BuildRequires:	drakxtools-backend
+BuildRequires:	perl-Locale-gettext
 
 Requires:	%{_vendor}-release
 Requires:	drakconf-icons = %{version}
