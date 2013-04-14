@@ -38,8 +38,8 @@ Suggests:	system-config-printer
 Suggests:	transfugdrake
 
 %description
-drakconf includes the %{vendor} Linux Control Center which is an interface to 
-multiple utilities from DrakXtools.
+drakconf includes the %{vendor} Linux Control Center 
+which is an interface to multiple utilities from DrakXtools.
 
 %package	icons
 Summary:	Icons of the %{vendor} Linux Control Center
