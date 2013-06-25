@@ -1,7 +1,7 @@
 Summary:	The %{vendor} Linux Control Center 
 Name:		drakconf
 Version:	12.19.2
-Release:	5
+Release:	6
 License:	GPLv2+
 Group:		System/Configuration/Other
 Url:		http://wiki.mandriva.com/en/ControlCenter
@@ -9,6 +9,10 @@ Source0:	%{name}-%{version}.tar.lzma
 Source1:	drakconf16.png
 Source2:	drakconf32.png
 Source3:	drakconf48.png
+Source4:	left-background-filler.png
+Source5:	left-background.png
+Source6:	splash_screen.png
+
 Patch0:		drakxtools-13.51-remove-autologin.patch
 BuildArch:	noarch
 
@@ -70,6 +74,9 @@ mkdir -p %{buildroot}/{%{_miconsdir},%{_liconsdir}}
 install -m644 %{SOURCE1} %{buildroot}/%{_miconsdir}/drakconf.png
 install -m644 %{SOURCE2} %{buildroot}/%{_iconsdir}/drakconf.png
 install -m644 %{SOURCE3} %{buildroot}/%{_liconsdir}/drakconf.png
+install -m644 %{SOURCE4} %{buildroot}/%{_datadir}/mcc/themes/default/left-background-filler.png
+install -m644 %{SOURCE5} %{buildroot}/%{_datadir}/mcc/themes/default/left-background.png
+install -m644 %{SOURCE6} %{buildroot}/%{_datadir}/mcc/themes/default/splash_screen.png
 
 #this allow user to use drakconf
 ln -sf %{_bindir}/drakconf %{buildroot}/%{_sbindir}/drakconf
