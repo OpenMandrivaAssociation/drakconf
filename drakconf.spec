@@ -1,11 +1,11 @@
 Summary:	The %{vendor} Linux Control Center 
 Name:		drakconf
-Version:	12.19.2
+Version:	12.19.3
 Release:	6
 License:	GPLv2+
 Group:		System/Configuration/Other
 Url:		http://wiki.mandriva.com/en/ControlCenter
-Source0:	%{name}-%{version}.tar.lzma
+Source0:	%{name}-12.19.2.tar.lzma
 Source1:	drakconf16.png
 Source2:	drakconf32.png
 Source3:	drakconf48.png
@@ -32,11 +32,16 @@ Requires:	harddrake-ui
 Requires:	perl-MDK-Common
 Requires:	userdrake
 Requires:	usermode
+Requires:       termcap
+Requires:       mdkonline >=2.77.19
+Requires:       drakmenustyle
+Requires:       drakbackup
+Requires:       drakvirt
+Requires:       msec-gui
+Requires:       tomoyo-gui
 Suggests:	drakfax
 Suggests:	drakguard
-Suggests:	drakmenustyle
 #Suggests:	draksnapshot
-Suggests:	mdkonline >= 2.77.19
 Suggests:	rpmdrake
 Suggests:	system-config-printer
 Suggests:	transfugdrake
@@ -105,3 +110,5 @@ cat images-big.list >> %{name}.lang
 %dir %{_datadir}/mcc/themes/default
 %{_datadir}/mcc/themes/default/gtkrc
 
+%post
+touch /var/log/explanations
