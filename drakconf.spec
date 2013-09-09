@@ -1,7 +1,7 @@
 Summary:	The %{vendor} Linux Control Center 
 Name:		drakconf
 Version:	12.19.2
-Release:	7	
+Release:	8
 License:	GPLv2+
 Group:		System/Configuration/Other
 Url:		%{disturl}
@@ -38,7 +38,6 @@ Suggests:	drakmenustyle
 Suggests:	drakbackup
 Suggests:	drakvirt
 Suggests:	msec-gui
-Suggests:	tomoyo-gui
 Suggests:	drakfax
 Suggests:	drakguard
 #Suggests:	draksnapshot
