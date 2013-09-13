@@ -1,0 +1,12 @@
+diff -aur drakconf-12.19.2/control-center drakconf-copy/control-center
+--- drakconf-12.19.2/control-center	2011-04-20 09:42:49.000000000 -0400
++++ drakconf-copy/control-center	2013-09-13 08:26:20.933478263 -0400
+@@ -159,7 +159,7 @@
+                             if_(0, "Mandriva Online"),
+                             "Updates Configuration",
+                             "Software Media Manager",
+-                            "Extended Maintenance",
++                            #"Extended Maintenance",
+                         ]
+                     },
+                 ),
