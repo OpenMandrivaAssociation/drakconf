@@ -16,7 +16,7 @@
     {
      binary => "$sbindir/system-config-printer",
 -    embedded => 1,
-+    embedded => 0,
++    embedded => -1,
      description => N("Set up the printer(s), the print job queues, ..."),
      icon => 'printer-mcc-mdk',
      long_description => N("Set up the printer(s), the print job queues, ..."),
