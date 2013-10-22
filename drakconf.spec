@@ -1,7 +1,7 @@
 Summary:	The %{vendor} Linux Control Center 
 Name:		drakconf
 Version:	12.19.2
-Release:	9
+Release:	10
 License:	GPLv2+
 Group:		System/Configuration/Other
 Url:		%{disturl}
@@ -15,6 +15,7 @@ Source6:	splash_screen.png
 
 Patch0:		drakxtools-13.51-remove-autologin.patch
 Patch1:		drakconf-12.19.2-remove-maintenance.patch
+Patch2:		drakconf-12.19.2-scp.patch
 BuildArch:	noarch
 
 BuildRequires:	gettext

@@ -1,0 +1,11 @@
+--- drakconf-12.19.2/progs.conf.orig	2013-10-22 16:45:01.469898645 +0100
++++ drakconf-12.19.2/progs.conf	2013-10-22 16:45:10.566899013 +0100
+@@ -41,7 +41,7 @@
+ INSTALL_FOR_Package_stats=
+ INSTALL_FOR_Parental_Controls=
+ INSTALL_FOR_Partition_Sharing=
+-INSTALL_FOR_Printer=system-config-printer task-printing-server task-printing-hp
++INSTALL_FOR_Printer=system-config-printer-gui task-printing-server task-printing-hp
+ INSTALL_FOR_Programs_scheduling=
+ INSTALL_FOR_Proxy_Configuration=
+ INSTALL_FOR_Remote_Control=
