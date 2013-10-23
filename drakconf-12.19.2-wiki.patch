@@ -1,0 +1,20 @@
+--- drakconf-12.19.2/control-center.orig	2013-10-23 23:04:05.800922278 +0100
++++ drakconf-12.19.2/control-center	2013-10-23 23:04:45.439923882 +0100
+@@ -666,7 +666,7 @@
+                   [ N("/_Help"), undef, undef, undef, '<Branch>' ],
+                   [ N("/_Help") . N("/_Help"), undef, \&run_help, undef, '<Item>', N("Help") ],
+                   [ N("/_Help") . N("/_Release notes"), undef,  sub { run_browser('Notes') }, undef, '<Item>', N("Help") ],
+-                  [ N("/_Help") . N("/What's _New?"), undef,  sub { run_browser("What's New?") }, undef, '<Item>', N("Help") ],
++                  [ N("/_Help") . N("/What's _New?"), undef,  sub { run_browser("New_Features_and_Major_Changes") }, undef, '<Item>', N("Help") ],
+                   [ N("/_Help") . N("/_Errata"), undef,  sub { run_browser('Errata') }, undef, '<Item>', N("Help") ],
+                   [ N("/_Help") . N("/_Report Bug"), undef, sub {
+                         run_program::raw({ detach => 1, as_user => 1 }, 'drakbug', '--report', (split(/\s/, $pending_app))[0] || 'drakconf');
+@@ -681,7 +681,7 @@
+ 
+ sub run_browser {
+     my ($url) = @_;
+-    $url = "http://wiki.mandriva.com/en/$release->{version}_$url" if $url !~ m!^http://!;
++    $url = "http://wiki.openmandriva.org/en/$release->{version}#$url" if $url !~ m!^http://!;
+     run_program::raw({ detach => 1, as_user => 1 }, '/usr/bin/www-browser', $url);
+ }
+ 
