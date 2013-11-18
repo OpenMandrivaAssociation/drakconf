@@ -18,7 +18,7 @@
  sub run_browser {
      my ($url) = @_;
 -    $url = "http://wiki.mandriva.com/en/$release->{version}_$url" if $url !~ m!^http://!;
-+    $url = "http://wiki.openmandriva.org/en/$release->{version}/Release_Notes/$url" if $url !~ m!^http://!;
++    $url = "http://wiki.openmandriva.org/en/$release->{version}/$url" if $url !~ m!^http://!;
      run_program::raw({ detach => 1, as_user => 1 }, '/usr/bin/www-browser', $url);
  }
  
