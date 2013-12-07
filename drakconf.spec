@@ -1,7 +1,7 @@
 Summary:	The %{vendor} Linux Control Center 
 Name:		drakconf
 Version:	12.19.2
-Release:	17
+Release:	18
 License:	GPLv2+
 Group:		System/Configuration/Other
 Url:		%{disturl}
