@@ -1,7 +1,7 @@
 Summary:	The %{vendor} Linux Control Center 
 Name:		drakconf
 Version:	12.19.2
-Release:	20
+Release:	21
 License:	GPLv2+
 Group:		System/Configuration/Other
 Url:		%{disturl}
@@ -35,7 +35,7 @@ Requires:	harddrake-ui
 Requires:	perl-MDK-Common
 Requires:	userdrake
 Requires:	usermode
-Suggests:	termcap
+Requires:	termcap
 Suggests:	mdkonline >=2.77.19
 Suggests:	drakmenustyle
 Suggests:	drakbackup
@@ -56,7 +56,7 @@ which is an interface to multiple utilities from DrakXtools.
 Summary:	Icons of the %{vendor} Linux Control Center
 Group:		Graphical desktop/Other
 
-%description	icons
+%description icons
 This package hold icons of the %{vendor} 
 Linux Control Center used in tools' banners.
 
