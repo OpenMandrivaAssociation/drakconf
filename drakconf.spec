@@ -27,7 +27,7 @@ Requires:	termcap
 Suggests:	mdkonline >=2.77.19
 Suggests:	drakmenustyle
 Suggests:	drakbackup
-Suggests:	drakvirt
+#Suggests:	drakvirt
 Suggests:	msec-gui
 Suggests:	drakfax
 Suggests:	drakguard
