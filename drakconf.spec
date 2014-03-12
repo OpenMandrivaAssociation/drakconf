@@ -1,5 +1,3 @@
-%define _requires_exceptions perl(Gtk2::Html2)
-
 Summary:	The %{vendor} Linux Control Center
 Name:		drakconf
 Version:	12.19.3
