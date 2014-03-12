@@ -26,7 +26,7 @@ Requires:	usermode
 Requires:	termcap
 Suggests:	mdkonline >=2.77.19
 Suggests:	drakmenustyle
-Suggests:	drakbackup
+#Suggests:	drakbackup
 #Suggests:	drakvirt
 Suggests:	msec-gui
 Suggests:	drakfax
