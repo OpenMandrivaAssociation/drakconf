@@ -1,8 +1,3 @@
 sources:
   drakconf-12.19.2.tar.lzma: a5df805aeba6ee3dd12d867c34e94726304bb599
-  drakconf16.png: b8c98e4102867d7c6e55db5ba4c7ae6f404f6f3d
-  drakconf32.png: 7008843004cbc645b55156b07a8b9a4720ca1ec8
-  drakconf48.png: cc07c41aa612b99e7514fd61a643ca5528437498
-  left-background-filler.png: 1284742ffffe775ed8b1a1fa78d516fa88610490
-  left-background.png: 2dbec3b5fcc23a8f8e61fb6571c4fd62c0f6c30c
-  splash_screen.png: 56809a3b33b15c0332103cb1b60a432e8c2d91da
+  drakconf-12.19.3.tar.xz: a6f32fe86e07845ed9c177ab85e226c08d3542b0
