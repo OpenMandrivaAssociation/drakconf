@@ -1,7 +1,7 @@
 Summary:	The %{vendor} Linux Control Center
 Name:		drakconf
 Version:	12.19.3
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		System/Configuration/Other
 Url:		%{disturl}
@@ -66,9 +66,9 @@ install -m644 drakconf.desktop %{buildroot}%{_datadir}/applications/%{_vendor}-d
 
 #install menu icon
 mkdir -p %{buildroot}/{%{_iconsdir},%{_miconsdir},%{_liconsdir}}
-install -m644 drakconf16.png %{buildroot}/%{_miconsdir}/drakconf.png
-install -m644 drakconf32.png %{buildroot}/%{_iconsdir}/drakconf.png
-install -m644 drakconf48.png %{buildroot}/%{_liconsdir}/drakconf.png
+install -m644 drakconf20.png %{buildroot}/%{_miconsdir}/drakconf.png
+install -m644 drakconf36.png %{buildroot}/%{_iconsdir}/drakconf.png
+install -m644 drakconf52.png %{buildroot}/%{_liconsdir}/drakconf.png
 
 #this allow user to use drakconf
 ln -sf %{_bindir}/drakconf %{buildroot}/%{_sbindir}/drakconf
