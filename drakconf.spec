@@ -1,7 +1,7 @@
 Summary:	The %{vendor} Linux Control Center
 Name:		drakconf
 Version:	12.19.3
-Release:	2
+Release:	3
 License:	GPLv2+
 Group:		System/Configuration/Other
 Url:		%{disturl}
@@ -24,6 +24,7 @@ Requires:	perl-MDK-Common
 Requires:	userdrake
 Requires:	usermode
 Requires:	termcap
+Requires:	vte
 Suggests:	mdkonline >=2.77.19
 Suggests:	drakmenustyle
 #Suggests:	drakbackup
