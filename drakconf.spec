@@ -24,6 +24,7 @@ Requires:	perl-MDK-Common
 Requires:	userdrake
 Requires:	usermode
 Requires:	termcap
+Requires:	vte
 Suggests:	mdkonline >=2.77.19
 Suggests:	drakmenustyle
 #Suggests:	drakbackup
