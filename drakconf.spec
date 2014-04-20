@@ -1,7 +1,7 @@
 Summary:	The %{vendor} Linux Control Center
 Name:		drakconf
 Version:	12.19.3
-Release:	5
+Release:	6
 License:	GPLv2+
 Group:		System/Configuration/Other
 Url:		%{disturl}
@@ -13,7 +13,7 @@ BuildRequires:	intltool
 BuildRequires:	perl-MDK-Common-devel
 BuildRequires:	drakxtools-backend
 BuildRequires:	perl-Locale-gettext
-Requires:	%{_vendor}-release
+Requires:	mandriva-release
 Requires:	drakconf-icons = %{version}
 Requires:	drakxtools >= 11.64
 Requires:	drakx-net
