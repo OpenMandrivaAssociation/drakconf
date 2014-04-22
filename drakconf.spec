@@ -31,7 +31,7 @@ Suggests:	drakmenustyle
 #Suggests:	drakvirt
 Suggests:	msec-gui
 Suggests:	drakfax
-Suggests:	drakguard
+#Suggests:	drakguard
 #Suggests:	draksnapshot
 Suggests:	rpmdrake
 Suggests:	system-config-printer
