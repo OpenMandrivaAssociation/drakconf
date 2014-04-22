@@ -1,7 +1,7 @@
 Summary:	The %{vendor} Linux Control Center
 Name:		drakconf
 Version:	12.19.3
-Release:	4
+Release:	5
 License:	GPLv2+
 Group:		System/Configuration/Other
 Url:		%{disturl}
@@ -32,7 +32,7 @@ Suggests:	drakmenustyle
 #Suggests:	drakvirt
 Suggests:	msec-gui
 Suggests:	drakfax
-Suggests:	drakguard
+#Suggests:	drakguard
 #Suggests:	draksnapshot
 Suggests:	rpmdrake
 Suggests:	system-config-printer
