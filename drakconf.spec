@@ -1,20 +1,18 @@
 Summary:	The %{vendor} Linux Control Center
 Name:		drakconf
-Version:	12.19.3
-Release:	5
+Version:	12.19.4
+Release:	1
 License:	GPLv2+
 Group:		System/Configuration/Other
 Url:		%{disturl}
 Source0:	%{name}-%{version}.tar.xz
-Patch0:		drakconf-12.19.3-grub2-config.patch
 BuildArch:	noarch
 BuildRequires:	gettext
 BuildRequires:	intltool
 BuildRequires:	perl-MDK-Common-devel
 BuildRequires:	drakxtools-backend
 BuildRequires:	perl-Locale-gettext
-
-Requires:	%{_vendor}-release
+Requires:	mandriva-release
 Requires:	drakconf-icons = %{version}
 Requires:	drakxtools >= 11.64
 Requires:	drakx-net
@@ -37,10 +35,10 @@ Suggests:	drakfax
 Suggests:	rpmdrake
 Suggests:	system-config-printer
 Suggests:	transfugdrake
-
-# For boot loader config using kcm-grub2
+# Replacing drakboot -- kdebase4-runtime is for kcmshell4
 Suggests:	kdebase4-runtime
 Suggests:	kcm-grub2
+Suggests:	firewall-config
 
 %description
 drakconf includes the %{vendor} Linux Control Center
