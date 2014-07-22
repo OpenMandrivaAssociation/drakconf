@@ -1,10 +1,10 @@
 Summary:	The %{vendor} Linux Control Center
 Name:		drakconf
-Version:	12.19.4
-Release:	3
+Version:	12.19.5
+Release:	1
 License:	GPLv2+
 Group:		System/Configuration/Other
-Url:		%{disturl}
+Url:		https://abf.io/omv_software/drakconf
 Source0:	%{name}-%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	gettext
@@ -12,7 +12,7 @@ BuildRequires:	intltool
 BuildRequires:	perl-MDK-Common-devel
 BuildRequires:	drakxtools-backend
 BuildRequires:	perl-Locale-gettext
-Requires:	mandriva-release
+Requires:	distro-release
 Requires:	drakconf-icons = %{version}
 Requires:	drakxtools >= 11.64
 Requires:	drakx-net
