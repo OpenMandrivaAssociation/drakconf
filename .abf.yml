@@ -1,5 +1,6 @@
 removed_sources:
   drakconf-12.19.3.tar.xz: cb5e1837075aae9f8180532bd7fd40e1af5cd820
   drakconf-12.19.4.tar.xz: 68c2a713a0a0f19c2a31e05e5bacafa02debb88a
-sources:
   drakconf-12.19.5.tar.xz: 61d05162eb49a700160adcc0b85333d0bbb9a81a
+sources:
+  drakconf-12.19.6.tar.xz: 73d9237dcf5ae0f21944ad15e9291445acd4b12c
