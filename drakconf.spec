@@ -1,7 +1,7 @@
 Summary:	The %{vendor} Linux Control Center
 Name:		drakconf
-Version:	12.19.7
-Release:	2
+Version:	12.19.8
+Release:	1
 License:	GPLv2+
 Group:		System/Configuration/Other
 Url:		https://abf.io/omv_software/drakconf
