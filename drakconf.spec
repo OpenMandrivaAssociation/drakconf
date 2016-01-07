@@ -1,7 +1,7 @@
 Summary:	The %{vendor} Linux Control Center
 Name:		drakconf
 Version:	12.19.8
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		System/Configuration/Other
 Url:		https://abf.io/omv_software/drakconf
@@ -36,8 +36,8 @@ Suggests:	rpmdrake
 Suggests:	system-config-printer
 Suggests:	transfugdrake
 # Replacing drakboot -- kdebase4-runtime is for kcmshell4
-Suggests:	kdebase4-runtime
-Suggests:	kcm-grub2
+#Suggests:	kdebase4-runtime
+#Suggests:	kcm-grub2
 Suggests:	firewall-config
 
 %description
