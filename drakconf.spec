@@ -1,7 +1,7 @@
 Summary:	The %{vendor} Linux Control Center
 Name:		drakconf
 Version:	12.19.8
-Release:	2
+Release:	3
 License:	GPLv2+
 Group:		System/Configuration/Other
 Url:		https://abf.io/omv_software/drakconf
@@ -15,7 +15,6 @@ BuildRequires:	perl-Locale-gettext
 Requires:	distro-release
 Requires:	drakconf-icons = %{version}
 Requires:	drakxtools >= 11.64
-Requires:	drakx-net
 Requires:	drakx-kbd-mouse-x11
 Requires:	gtk+2.0
 Requires:	harddrake-ui
