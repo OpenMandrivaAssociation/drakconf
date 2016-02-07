@@ -1,7 +1,7 @@
 Summary:	The %{vendor} Linux Control Center
 Name:		drakconf
 Version:	13.1
-Release:	2
+Release:	3
 License:	GPLv2+
 Group:		System/Configuration/Other
 Url:		https://abf.io/omv_software/drakconf
@@ -21,6 +21,7 @@ Requires:	perl-MDK-Common
 Requires:	userdrake
 Requires:	termcap
 Requires:	vte2.91
+Requires:	typelib(Vte) = 2.91
 #Suggests:	mdkonline >=2.77.19
 Suggests:	drakmenustyle
 #Suggests:	drakbackup
