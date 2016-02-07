@@ -1,7 +1,7 @@
 Summary:	The %{vendor} Linux Control Center
 Name:		drakconf
-Version:	12.19.8
-Release:	3
+Version:	13.0
+Release:	1
 License:	GPLv2+
 Group:		System/Configuration/Other
 Url:		https://abf.io/omv_software/drakconf
@@ -16,13 +16,11 @@ Requires:	distro-release
 Requires:	drakconf-icons = %{version}
 Requires:	drakxtools >= 11.64
 Requires:	drakx-kbd-mouse-x11
-Requires:	gtk+2.0
 Requires:	harddrake-ui
 Requires:	perl-MDK-Common
 Requires:	userdrake
-Requires:	usermode
 Requires:	termcap
-Requires:	vte
+Requires:	vte2.91
 Suggests:	mdkonline >=2.77.19
 Suggests:	drakmenustyle
 #Suggests:	drakbackup
@@ -73,9 +71,6 @@ install -m644 drakconf20.png %{buildroot}/%{_miconsdir}/drakconf.png
 install -m644 drakconf36.png %{buildroot}/%{_iconsdir}/drakconf.png
 install -m644 drakconf52.png %{buildroot}/%{_liconsdir}/drakconf.png
 
-#this allow user to use drakconf
-ln -sf %{_bindir}/drakconf %{buildroot}/%{_sbindir}/drakconf
-
 install -d %{buildroot}/etc
 touch %{buildroot}/etc/mcc.conf
 
@@ -92,13 +87,16 @@ cat images-big.list >> %{name}.lang
 %config(noreplace) %{_sysconfdir}/sysconfig/mcc.conf
 %{_bindir}/*
 %{_sbindir}/*
+%{_libexecdir}/drakconf
+%{_libexecdir}/drakxconf
 %{_datadir}/applications/%{_vendor}-drakconf.desktop
 %{perl_vendorlib}/MDV
 %dir %{_datadir}/mcc
 %{_datadir}/mcc/progs.conf
+%{_datadir}/polkit-1/actions/*
 %dir %{_datadir}/mcc/themes/
 %dir %{_datadir}/mcc/themes/default
-%{_datadir}/mcc/themes/default/gtkrc
+%{_datadir}/mcc/themes/default/mcc.css
 
 %post
 mkdir -p %{_localstatedir}/log
