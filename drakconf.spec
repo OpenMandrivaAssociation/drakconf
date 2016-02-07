@@ -1,6 +1,6 @@
 Summary:	The %{vendor} Linux Control Center
 Name:		drakconf
-Version:	13.0
+Version:	13.1
 Release:	1
 License:	GPLv2+
 Group:		System/Configuration/Other
