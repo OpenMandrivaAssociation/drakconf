@@ -1,6 +1,6 @@
 Summary:	The %{vendor} Linux Control Center
 Name:		drakconf
-Version:	13.2
+Version:	13.3
 Release:	1
 License:	GPLv2+
 Group:		System/Configuration/Other
@@ -16,6 +16,7 @@ Requires:	distro-release
 Requires:	drakconf-icons = %{version}
 Requires:	drakxtools >= 11.64
 Requires:	drakx-kbd-mouse-x11
+Requires:	drakx-net
 Requires:	harddrake-ui
 Requires:	perl-MDK-Common
 Requires:	userdrake
