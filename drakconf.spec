@@ -4,8 +4,8 @@ Version:	13.6
 Release:	1
 License:	GPLv2+
 Group:		System/Configuration/Other
-Url:		https://abf.io/omv_software/drakconf
-Source0:	%{name}-%{version}.tar.xz
+Url:		https://github.com/OpenMandrivaSoftware/drakconf
+Source0:	https://github.com/OpenMandrivaSoftware/drakconf/archive/%{name}-%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	gettext
 BuildRequires:	intltool
