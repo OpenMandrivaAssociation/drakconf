@@ -1,20 +1,20 @@
 Summary:	The %{vendor} Linux Control Center
 Name:		drakconf
-Version:	13.5
+Version:	13.6
 Release:	1
 License:	GPLv2+
 Group:		System/Configuration/Other
-Url:		https://abf.io/omv_software/drakconf
-Source0:	%{name}-%{version}.tar.xz
+Url:		https://github.com/OpenMandrivaSoftware/drakconf
+Source0:	https://github.com/OpenMandrivaSoftware/drakconf/archive/%{name}-%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	gettext
 BuildRequires:	intltool
 BuildRequires:	perl-MDK-Common-devel
-BuildRequires:	drakxtools-backend
+BuildRequires:	drakxtools-backend >= 16.74
 BuildRequires:	perl-Locale-gettext
 Requires:	distro-release
 Requires:	drakconf-icons = %{version}
-Requires:	drakxtools >= 11.64
+Requires:	drakxtools >= 16.74
 Requires:	drakx-kbd-mouse-x11
 Requires:	drakx-net
 Requires:	harddrake-ui
@@ -40,7 +40,7 @@ Suggests:	firewall-config
 drakconf includes the %{vendor} Linux Control Center
 which is an interface to multiple utilities from DrakXtools.
 
-%package	icons
+%package icons
 Summary:	Icons of the %{vendor} Linux Control Center
 Group:		Graphical desktop/Other
 
