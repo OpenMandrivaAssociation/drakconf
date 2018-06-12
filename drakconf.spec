@@ -1,7 +1,7 @@
 Summary:	The %{vendor} Linux Control Center
 Name:		drakconf
 Version:	13.6
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		System/Configuration/Other
 Url:		https://github.com/OpenMandrivaSoftware/drakconf
